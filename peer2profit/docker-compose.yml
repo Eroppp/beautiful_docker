@@ -4,7 +4,5 @@ services:
     deploy:
       mode: replicated
       replicas: 3
-    image: enwaiax/peer2profit
-    environment: 
-      - email=chasing0806@gmail.com
-    command: ["/app/p2pclient", "-l", "$email"]
+    image: enwaiax/peer2profit:latest
+    command: ["/app/p2pclient", "-l", "${email}"]
