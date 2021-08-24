@@ -6,6 +6,4 @@ services:
       dockerfile: Dockerfile
     image: enwaiax/peer2profit
     restart: unless-stopped
-    environment: 
-      - email=chasing0806@gmail.com
-    command: ["/app/p2pclient", "-l", "$email"]
+    command: ["/app/p2pclient", "-l", "${email}"]
